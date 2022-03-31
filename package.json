@@ -3,5 +3,18 @@
   "version": "1.0.0",
   "main": "index.tsx",
   "author": "Koki Murakami",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^9.1.0",
+    "@types/power-assert": "^1.5.8",
+    "mocha": "^9.2.2",
+    "power-assert": "^1.6.1",
+    "ts-loader": "^9.2.8",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r ts-node/register -r tsconfig-paths/register src/test/**/*.ts --timeout 30000"
+  }
 }
