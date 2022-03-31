@@ -5,14 +5,16 @@ export type MortalType = "archmage" | "dragonrider" | "dragonslayer" | "druid" |
     "merchant-prince" | "priest" | "princess" | "prophet" | "queen" | "sorcerer" | "thief" | "wyrm-priest"
 
 export type CardType = NonAttributeType | MetalType | ChromaticType | MortalType
-export type CardDefinition = {
+export type CardUniqueAttributes = {
     type: CardType
     strength: number
 }
 
+export type Alignment = "good" | "evil" | "mortal"
+
 export type Card = {
     name: string
-    definition: CardDefinition
-    alignment: "good" | "evil" | "mortal"
+    uniqueAttributes: CardUniqueAttributes
+    alignment: Alignment
     legendary: boolean
 }
